@@ -1,3 +1,28 @@
+# Feb 26
+
+## UART and GPIO driver
+- Migrated to RPi 3 now
+  - `uart` to `usb tty`
+
+- Define `driver` interface for device driver
+  - Define `Result<(), ()>` for async task
+  - Define `DeviceDriver` for device compatibility and device initialization
+- Define `console` interface for input/output
+  - Define `Read`, `Write`, `Statistics` trait
+  - Impl `console` on the `uart` device
+
+- Implemented `Mutex` as the lock for future possible multi-process
+  - Got rid of unsafe raw pointer
+
+- `UART` and `GPIO` driver
+  - Write a wrapper of `GPIO` and `UART` register according to the instruction of Broadcom 2835
+  - Implement the basic `read` and `write` for `GPIO` pins
+  - Impl `console` interface for `UART`
+
+
+
+
+
 # Feb 19
 
 ## Stop using L4ka
