@@ -1,3 +1,12 @@
+# Mar 4
+
+## Multi-threading kernel
+- Using different core to do multi threading(Thus saved tons of code for context switch stuff...)
+- Lock to stop data race
+
+## GPIO application
+- In one thread we implemented a GPIO application that lights up an LED.
+
 # Feb 26
 
 ## UART and GPIO driver
@@ -15,10 +24,6 @@
   - Write a wrapper of `GPIO` and `UART` register according to the instruction of Broadcom 2835
   - Implement the basic `read` and `write` for `GPIO` pins
   - Impl `console` interface for `UART`
-
-
-
-
 
 # Feb 19
 
